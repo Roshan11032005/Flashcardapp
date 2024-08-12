@@ -1,9 +1,11 @@
+
 {
   "name": "flashcard",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "cd backend && npm start",
+    "prebuild":"cd backend && npm install & cd frontend && npm install", 
     "build": "cd root169 && npm run build",
     "postbuild": "shx mv root169/build backend"
   },
@@ -11,6 +13,9 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "engines": {
+    "node": ">=18"
+  },
   "devDependencies": {
     "shx": "^0.3.4"
   }
