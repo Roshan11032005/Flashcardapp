@@ -1,13 +1,12 @@
-
 {
   "name": "flashcard",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "cd backend && npm start",
-    "prebuild": "cd backend && npm install && cd ../root169 && npm install",
-    "build": "cd frontend && npm run build",
-    "postbuild": "shx mv frontend/build backend"
+    "prebuild": "cd backend && npm install && cd root169 && npm install",
+    "build": "cd root169 && npm run build",
+    "postbuild": "shx mv root169/build backend"
   },
   "keywords": [],
   "author": "",
@@ -20,3 +19,4 @@
     "shx": "^0.3.4"
   }
 }
+
