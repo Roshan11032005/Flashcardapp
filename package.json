@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "cd backend && npm start",
-    "prebuild": "cd backend && npm install && cd root169 && npm install",
-    "build": "cd root169 && npm run build",
-    "postbuild": "shx mv root169/build backend"
-  },
+  "start": "cd backend && npm start",
+  "prebuild": "cd backend && npm install && cd ../root169 && npm install",
+  "build": "cd root169 && npm run build",
+  "postbuild": "shx mv root169/build backend || move /Y root169\\build backend"
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
