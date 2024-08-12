@@ -14,10 +14,11 @@ app.use(cors());
 app.use(express.json());
 
 const pool = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '123456',
-    database: 'test',
+    host: 'sql12.freesqldatabase.com',
+    user: 'sql12725523',
+    password: 'ffgB1CW5p6',
+    database: 'sql12725523',
+    port: 3306,
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
@@ -92,7 +93,7 @@ app.get('/boards', (req, res) => {
       }
       res.json(data);
     });
-  });
+});
 
 // Create a New Board
 app.post('/boards', (req, res) => {
